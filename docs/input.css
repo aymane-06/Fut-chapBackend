@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ts-control,.ts-dropdown,.ts-control input{
+    background-color: #1e1e1e !important;
+    color: #fff !important;
+    font-family: sans-serif !important;
+}
+.active{
+        background-color: #1e1e1e !important;
+        color: #495c68 !important;
+    
+} 
+.ts-control{
+    height: 35.6px;
+}
