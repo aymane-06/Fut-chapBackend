@@ -558,6 +558,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-\[20px\] {
   height: 20px;
 }
@@ -584,3 +588,4 @@ video {
 .ts-control{
   height: 35.6px;
 }
+
