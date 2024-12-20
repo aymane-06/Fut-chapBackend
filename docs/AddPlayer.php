@@ -101,7 +101,7 @@
 
         <div class="flex gap-8">
         <label for="select-league"class="text-white">League:
-        <select id="select-league" class="w-[300px] flex " name="league"  style="background-color: #1e1e1e;" placeholder="Pick leauge" value="<?php echo $editeplayer['leagueid'] ;?>">
+        <select id="select-league" class="w-[300px] flex " name="league"  style="background-color: #1e1e1e;" placeholder="Pick league" value="<?php echo $editeplayer['leagueid'] ;?>">
             <Option value=""></Option>
         </select>
         <p class="text-red-500 font-sans"><?php echo $error["league"]; ?></p>
@@ -129,22 +129,22 @@
 <h1 class="text-white text-center" >Player Stats</h1>
 <div class="flex gap-8">
     <label for="PAC" class="text-white "><span class="stats">PAC:</span><br>
-        <input type="number"name="pac" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["pac"] ;?>" >
+        <input type="number"name="pac" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["pac"] ;?>" required >
     </label>
     <label for="PAS" class="text-white "><span class="stats">PAS:</span><br>
-        <input type="number" name="pas" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["pas"] ;?>" >
+        <input type="number" name="pas" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["pas"] ;?>" required>
     </label>
     <label for="DEF" class="text-white "><span class="stats">DEF:</span><br>
-        <input type="number" name="def" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["def"] ;?>">
+        <input type="number" name="def" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["def"] ;?>"required>
     </label>
     <label for="SHO" class="text-white "><span class="stats">SHO:</span><br>
-        <input type="number" name="sho" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["sho"] ;?>" >
+        <input type="number" name="sho" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["sho"] ;?>" required >
     </label>
     <label for="DRI" class="text-white "><span class="stats">DRI:</span><br>
-        <input type="number" name="dri" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["dri"] ;?>">
+        <input type="number" name="dri" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["dri"] ;?>" required>
     </label>
     <label for="PHY" class="text-white "><span class="stats">PHY:</span><br>
-        <input type="number" name="phy" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["phy"] ;?>" >
+        <input type="number" name="phy" min="30" max="99" step="1" class=" flex bg-[#1e1e1e] border-white h-[35.6px] font-sans rounded-[3px] border-solid border-[1px]" value="<?php echo $editeplayer[0]["phy"] ;?>" required>
     </label>
   </div>
   <p class="text-red-500 font-sans"><?php echo $error["stats"];?></p>

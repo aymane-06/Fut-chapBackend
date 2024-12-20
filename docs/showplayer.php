@@ -23,10 +23,10 @@
         <tbody>
             <?php foreach($players as $player){
                 echo"
-                <tr class='border-t border-gray-600'>
+               <tr class='border-t border-gray-600 hover:border-gray-500 cursor-pointer'>
                     <td class='px-4 py-2 text-center'>$player[playerid]</td>
                     <td class='px-4 py-2'>
-                        <div class='flex items-center space-x-4'>
+                        <a href='./playerStats.php?id=$player[playerid]'><div class='flex items-center space-x-4'>
                             <div class='relative'>
                                 <img src='$player[playerimage]' class='relative z-[1] w-24 h-24 object-cover rounded-full'/>
                                 <img class='absolute inset-0 w-24 h-24 object-cover rounded-full opacity-60' src='$player[cardtype]' />
@@ -39,7 +39,7 @@
                                     <img src='$player[teamLogo]' class='w-5 h-5' alt='Team'/>
                                 </div>
                             </div>
-                        </div>
+                        </div></a>
                     </td>
                     <td class='px-4 py-2 text-center'>$player[position]</td>
                     <td class='px-4 py-2 text-center'>$player[pac]</td>

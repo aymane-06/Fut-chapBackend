@@ -96,8 +96,8 @@ WHERE playerid=?;");
             $stmt = $conn->prepare("INSERT INTO players(playername,position,playerimage,pac,sho,def,pas,dri,phy,teamid,cardtype,nationalityid,leagueid) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?) ");
             $stmt->bind_param("sssiiiiiiisii",   $playerNAme,$playerPosition,$playerimg,$playerpac,$playersho,$playerdef,$playerpas,$playerdri,$playerphy,$playerclub,$playercard,$playernation,$playerleague);
             }
-    
-            $stmt->execute();
+  
+            $stmt->execute(); 
             header("location:./showPlayer.php");
     
             $stmt->close();

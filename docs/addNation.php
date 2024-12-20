@@ -43,8 +43,8 @@ if(isset($_GET["edit"])) {
 }
 }else{
     $nationalityEdit[0]=[
-        "nationalityName"=> "",
-        "nationalityLogo"=> "",
+        "nationalityname"=> "",
+        "flag"=> "",
     ];
 }
 if(isset($_GET["delete"])) {

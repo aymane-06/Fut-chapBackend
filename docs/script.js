@@ -67,10 +67,10 @@ new TomSelect('#select-Name',{
 new TomSelect('#select-nation',{
     valueField: 'nationalityid',
     labelField: 'name',
-    searchField: 'name',
+    searchField: 'nationalityname',
     // fetch remote data
     load: function(query, callback) {
-        fetch("../jasonFiles/nation.json")
+        fetch("../jasonFiles/nation.json?v=1")
             .then(response => response.json())
             .then(json => {
                 callback(json);
@@ -84,14 +84,14 @@ new TomSelect('#select-nation',{
     render: {
         option: function(item, escape) {
             return `<div class="flex w-full">
-                    <img src="${item.img}" alt="" class="w-[20px] h-[20px]" >
-                    <h1>${item.name}</h1>
+                    <img src="${item.flag}" alt="" class="w-[20px] h-[20px]" >
+                    <h1>${item.nationalityname}</h1>
                     </div>`;
         },
         item: function(item, escape) {
             return `<div class="flex" style="display: flex;align-items: center;">
-                    <img src="${item.img}" alt="" class="w-[20px] h-[20px] NationImg" >
-                    <span>${item.name}</span>
+                    <img src="${item.flag}" alt="" class="w-[20px] h-[20px] NationImg" >
+                    <span>${item.nationalityname}</span>
                     </div>`;
         }
     },
@@ -133,14 +133,14 @@ new TomSelect('#select-version',{
 new TomSelect('#select-club',{
     valueField: 'teamID',
     labelField: 'name',
-    searchField: 'name',
+    searchField: 'teamName',
     // fetch remote data
     load: function(query, callback) {
-        fetch("../jasonFiles/teams.json")
+        fetch("../jasonFiles/teams.json?v=1")
             .then(response => response.json())
             .then(json => {
                 callback(json);
-                // console.log(json);
+                console.log(json);
             }).catch(()=>{
                 callback();
             });
@@ -150,14 +150,14 @@ new TomSelect('#select-club',{
     render: {
         option: function(item, escape) {
             return `<div class="flex w-full">
-                    <img src="${item.img}" alt="" class="w-[20px] h-[20px]" >
-                    <h1>${item.name}</h1>
+                    <img src="${item.teamLogo}" alt="" class="w-[20px] h-[20px]" >
+                    <h1>${item.teamName}</h1>
                     </div>`;
         },
         item: function(item, escape) {
             return `<div class="flex" style="display: flex;align-items: center;">
-                    <img src="${item.img}" alt="" class="w-[20px] h-[20px] ClubImg" >
-                    <span>${item.name}</span>
+                    <img src="${item.teamLogo}" alt="" class="w-[20px] h-[20px] ClubImg" >
+                    <span>${item.teamName}</span>
                     </div>`;
         }
     },

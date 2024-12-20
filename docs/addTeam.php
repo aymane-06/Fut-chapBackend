@@ -138,6 +138,11 @@ header("location:./addTeam.php");
         let editclubeid = urlParams.get('edit');
     if(editclubeid){
         document.getElementById("addTeamBtn").click();
+        let popover=document.getElementById('AddTeam');
+        popover.click();
+        popover.addEventListener('blur',()=>{
+            window.location='http://localhost/Fut-chapBackend/docs/addTeam.php'
+        })
     };
 
 </script>

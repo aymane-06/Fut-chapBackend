@@ -70,5 +70,35 @@ LEFT JOIN league ON players.leagueid = league.leagueid;";
         header("location:./AddPlayer.php?Editid=$id");
 }
 
+$sql= "SELECT * FROM nationality";
+    $result= $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+           global $players;
+             $nationality[]= $row;
+        }
+    }
+    $encodedData=json_encode($nationality,JSON_PRETTY_PRINT||JSON_UNESCAPED_UNICODE);
+
+
+    // json machi jason 
+    file_put_contents("../jasonFiles/nation.json", '');
+    file_put_contents("../jasonFiles/nation.json", $encodedData);
+
+    $sql= "SELECT * FROM team";
+    $result= $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+           global $players;
+             $teams[]= $row;
+        }
+    }
+    $encodedData=json_encode($teams,JSON_PRETTY_PRINT||JSON_UNESCAPED_UNICODE);
+
+
+    // json machi jason 
+    file_put_contents("../jasonFiles/teams.json", '');
+    file_put_contents("../jasonFiles/teams.json", $encodedData);   
+
 
 ?>
