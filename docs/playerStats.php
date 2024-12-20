@@ -29,7 +29,7 @@ WHERE players.playerid=$id;";
 $result = mysqli_query($conn, $sql);
 $playerstats=mysqli_fetch_assoc($result);
 }
-$reating=($playerstats["pac"]+$playerstats["pac"]+$playerstats["pac"]+$playerstats["pac"]+$playerstats["pac"]+$playerstats["pac"])/6;
+$reating=intval(($playerstats["pac"]+$playerstats["sho"]+$playerstats["def"]+$playerstats["pas"]+$playerstats["dri"]+$playerstats["phy"])/6);
 
 ?>
 <section id="playerStats" class="flex flex-col w-full gap-32">

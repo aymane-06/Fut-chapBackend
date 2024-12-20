@@ -63,7 +63,7 @@ header("location:./addTeam.php");
     </button>
 
     <!-- Add Team Popover Form -->
-    <div popover  class="bg-[#2b2a2a] w-[40%] border-gray-400 border-solid border-[2px] " id="AddTeam" >
+    <div popover  class="bg-[#2b2a2a] w-[40%] border-gray-400 border-solid border-[2px] absolute top-[30%] left-[30%]" id="AddTeam" >
         <h1 class="text-center text-white text-2xl font-bold mb-4">Add Team</h1>
         <form action="" method="POST" class="flex flex-col items-center space-y-4 w-full">
             <!-- Team Name Input -->

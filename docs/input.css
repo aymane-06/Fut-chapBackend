@@ -15,4 +15,45 @@
 .ts-control{
     height: 35.6px;
 }
+@font-face{
+    font-family: "Poppins";
+    src: url("./assets/Font/Poppins-Black.ttf");
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* .typ{
+    
+    filter: drop-shadow( 0px 10px #458ea9);
+    
+} */
+.ts-control,.ts-dropdown,.ts-control input{
+    background-color: #1e1e1e !important;
+    color: #fff !important;
+    font-family: sans-serif !important;
+    
+}
+.active{
+        background-color: #1e1e1e !important;
+        color: #495c68 !important;
+    
+} 
+.ts-control{
+    height: 35.6px;
+}
+.player_card{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.typ{
+    width: 100%;
+}
+#deffenc>.player_card{
+    margin: 0 14px;
+}
 
