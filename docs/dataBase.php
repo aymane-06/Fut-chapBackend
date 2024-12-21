@@ -83,7 +83,7 @@ $sql= "SELECT * FROM nationality";
 
     // json machi jason 
     file_put_contents("../jasonFiles/nation.json", '');
-    file_put_contents("../jasonFiles/nation.json", $encodedData);
+    file_put_contents("../jasonFiles/nation.json", $encodedData);//!
 
     $sql= "SELECT * FROM team";
     $result= $conn->query($sql);
