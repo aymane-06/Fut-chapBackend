@@ -142,7 +142,7 @@
 
 <section id="playerSection" class="absolute top-72 bg-[#2b2a2a]  w-full h-[200%] hidden z-50">
 <label for="serchPlayer" class="m-6 text-start">Serch Player:<br>
-    <input type="text" placeholder="Serch Player">
+    <input type="text" id="serchPlayer" placeholder="Serch Player">
 </label>
 <button id="CloseAddPlayer">X</button>
 <div id="ShowCard" class="flex flex-wrap gap-8">
