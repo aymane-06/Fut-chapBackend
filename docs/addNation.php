@@ -1,6 +1,6 @@
 <?php include("./header.php") ?>
 <?php include("./sideBar.php") ?>
-<?php include("./conect.php") ;
+<?php include("./conect.php") ;// include or include_once ?
 
  $sql="SELECT nationality.*,COUNT(players.playerid) total
 FROM nationality 
@@ -29,7 +29,7 @@ else {
 
 }$stmt->execute();
     
-header("location:./addNation.php");
+header("location:./addNation.php");//redirect bofore close connection ?
             $stmt->close();
             $conn->close();
 
@@ -38,9 +38,9 @@ if(isset($_GET["edit"])) {
     $id=$_GET["edit"];
     $sql= "SELECT * FROM nationality WHERE nationalityid=$id";
     $result=mysqli_query($conn,$sql);
-    while($row=mysqli_fetch_assoc($result)) {
+    while($row=mysqli_fetch_assoc($result)) {// ca mérite pas une loop, vous allez recupere un line !
         $nationalityEdit[]= $row;
-}
+    }
 }else{
     $nationalityEdit[0]=[
         "nationalityname"=> "",
