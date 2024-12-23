@@ -231,9 +231,9 @@ await fetch('./gatPlayersToPlayers.php')
     console.log(Post.getAttribute('id'));
     
     if(Post.getAttribute('id')=="addPlayerBtn"){
-        players=playersData;
+        players=playersData.filter(player=>playersInTeam.every(pt => pt !== player.playerid));
     }else if(Post.getAttribute('id')=="serchPlayer"){
-        players = playersData.filter(player => player.playername.includes(Post.value));
+        players = playersData.filter(player => player.playername.includes(Post.value)&&playersInTeam.every(pt => pt !== player.playerid));
     }else{
         players = playersData.filter(player => 
             player.position === Post.getAttribute('id') &&
@@ -314,10 +314,15 @@ function test(card){
     playersInTeam.push(card.getAttribute('data-pos'));
 
     card.removeAttribute('onclick');
+console.log(Post.getAttribute('id'));
 
+    if(Post.getAttribute('id')=="addPlayerBtn"){
+            let subErea=document.getElementById('players_sub');
+            subErea.appendChild(card);
+    }else{
 
     Post.innerHTML='';
-    Post.appendChild(card);
+    Post.appendChild(card);}
     playerSection.classList.remove('block');
     playerSection.classList.add('hidden');
 }
